@@ -17,6 +17,6 @@ spec:
             - "POST"
             - "--data-urlencode"
             - "payload={\"channel\": \"#yongjoonpark-test\", \"username\": \"yongjoon.park\", \"text\": \"App Sync succeeded\", \"icon_emoji\": \":ghost:\"}"
-            - "https://hooks.slack.com/services/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"
+            - "https://hooks.slack.com/services/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"
       restartPolicy: Never
   backoffLimit: 2
