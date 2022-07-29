@@ -9,8 +9,14 @@ spec:
   template:
     spec:
       containers:
-      - name: sleep
-        image: alpine:latest
-        command: ["sleep", "10"]
+        - name: slack-notification
+          image: curlimages/curl
+          command:
+            - "curl"
+            - "-X"
+            - "POST"
+            - "--data-urlencode"
+            - "payload={\"channel\": \"#yongjoonpark-test\", \"username\": \"yongjoon.park\", \"text\": \"App Sync succeeded\", \"icon_emoji\": \":ghost:\"}"
+            - "https://hooks.slack.com/services/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"
       restartPolicy: Never
-  backoffLimit: 0
+  backoffLimit: 2
